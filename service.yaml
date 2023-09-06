@@ -6,6 +6,7 @@ spec:
   ports:
   - port: 80
     targetPort: 80
+    nodePort: 30000 # Specify the NodePort you want to use (e.g., 30000)
   selector:
     app: guestbook-ui
-  type: LoadBalancer
+  type: NodePort # Change the type from LoadBalancer to NodePort
